@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 // const { program } = require('commander'); // v7.1.0 
 const program = require('commander'); // v3.0.2
-
 const api = require('./index.js')
+const pkg = require('./package.json')
 
-// program
-//   .option('-x, --xxx <args...>', 'why to x')
-program.version('0.0.2')
+program.version(pkg.version)
 
 program
   .command('add')
