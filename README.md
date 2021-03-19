@@ -2,6 +2,24 @@
 
 一个命令行的任务清单管理工具 
 
+## 安装
+
+```sh
+npm install -g toup
+# or yarn global add toup
+```
+
+## 使用
+
+```sh
+# 查看
+t
+# 添加
+t add [taskName]
+# 清空任务
+t clear
+```
+
 ## 依赖
 
 ### commander 
