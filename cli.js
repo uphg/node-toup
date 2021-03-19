@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // const { program } = require('commander'); // v7.1.0 
 const program = require('commander'); // v3.0.2
 

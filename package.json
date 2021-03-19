@@ -1,5 +1,5 @@
 {
-  "name": "node-toup",
+  "name": "toup",
   "bin": {
     "t": "cli.js"
   },
