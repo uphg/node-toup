@@ -1,4 +1,4 @@
-const db = require('./database.js');
+const db = require('./db.js');
 const inquirer = require('inquirer');
 
 module.exports.add = async (title)=>{
@@ -26,7 +26,7 @@ async function showTaskList() {
   } else if( index === -2) {
     askForCreateTask(list)
   }
-}
+}f
 
 // 打印任务列表
 function printTasks(list) {

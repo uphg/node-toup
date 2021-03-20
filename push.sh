@@ -1,13 +1,12 @@
-if [ -z $1 ];then
-parame="update"
+if [ -z "$1" ];then
+params="update"
 else
-parame=$1
+params="$1"
 fi
-
 
 git add .
 echo -e "\n# commit code"
-git commit -m "${parame}"
+git commit -m "${params}"
 
 echo -e "\n# push Github"
 git push github master:master
