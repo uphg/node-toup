@@ -26,7 +26,7 @@ async function showTaskList() {
   } else if( index === -2) {
     askForCreateTask(list)
   }
-}f
+}
 
 // 打印任务列表
 function printTasks(list) {
@@ -50,7 +50,6 @@ function printTasks(list) {
       resolve(index)
     })
   })
-  
 }
 
 // 操作指定任务
