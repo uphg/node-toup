@@ -3,6 +3,9 @@ const fs = require('fs')
 jest.mock('fs') // 引入 mock 的 fs 模块
 
 describe('db', ()=>{
+  afterEach(()=>{
+    fs.clearMocks()
+  })
   it('can read', async ()=>{
     const data = [{title: 'hi', done: true}]
     fs.setReadFileMock('/xxx', null, JSON.stringify(data))
