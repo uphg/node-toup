@@ -17,6 +17,10 @@
     "todo"
   ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uphg/node-toup/issues"
+  },
+  "homepage": "https://github.com/uphg/node-toup",
   "dependencies": {
     "commander": "^3.0.2",
     "inquirer": "^8.0.0"
