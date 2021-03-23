@@ -6,8 +6,16 @@
   "files": [
     "*.js"
   ],
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uphg/node-toup.git"
+  },
+  "keywords": [
+    "node",
+    "todo"
+  ],
   "license": "MIT",
   "dependencies": {
     "commander": "^3.0.2",
