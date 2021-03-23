@@ -15,7 +15,5 @@ lerna-debug.log*
 node_modules/
 jspm_packages/
 
-# 禁止提交dist
-/docs/.vuepress/dist
-
+.vscode/
 .idea/
