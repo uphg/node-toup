@@ -1,4 +1,4 @@
-## To up
+## Toup
 
 一个命令行的任务清单管理工具 
 
@@ -12,9 +12,9 @@ npm install -g toup
 ## 使用
 
 ```sh
-# 查看
+# 查看/编辑任务列表
 t
-# 添加
+# 添加任务
 t add [taskName]
 # 清空任务
 t clear
