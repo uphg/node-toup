@@ -18,10 +18,8 @@ module.exports.showAll = showTaskList
 
 // 显示任务列表
 async function showTaskList() {
-  console.log('已打印')
   const list = await db.read()
   const index = await printTasks(list)
-  console.log('已读取')
   if (index >= 0) {
     askForAction(list, index)
   } else if( index === -2) {

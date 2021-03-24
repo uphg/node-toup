@@ -3,12 +3,13 @@ const { program } = require('commander') // v7.1.0
 const api = require('./index.js')
 const pkg = require('./package.json')
 
-program.version(pkg.version, '-v, --version', 'display version information')
-
 if (process.argv.length === 2) {
   // 用户没有添加参数
   api.showAll()
 } else {
+  program
+    .version(pkg.version, '-v, --version', 'display version information')
+
   program
     .command('add')
     .description('add a task')
