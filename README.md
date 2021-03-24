@@ -22,15 +22,6 @@ t clear
 
 ## 依赖
 
-### commander.js
-
-- 当前使用 v3.0.2
-- 最新版 v7.1.0 
-
-### inquirer.js
-
-- 当前使用 v8.0.0
-
-### Jest.js
-
-- 当前使用 v26.6.3
+- commander.js v7.2.0 
+- inquirer.js v8.0.0
+- Jest.js v26.6.3

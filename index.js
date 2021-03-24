@@ -39,7 +39,7 @@ function printTasks(list) {
         { name: '创建任务', value: '-2' },
         ...list.map((task, index)=>{
           return {
-            name: `${task.done ? '[x]' : '[_]'} ${index + 1} ${task.title}`,
+            name: `${task.done ? '[√]' : '[_]'} ${index + 1}.${task.title}`,
             value: index
           }
         })
