@@ -1,7 +1,7 @@
 const homedir = require('os').homedir();
 const home = process.env.HOME || homedir // 由于有的用户 Home 目录不同，所以优先使用用户设置的 Home 目录
-const path = require('path')
-const dbPath = path.join(home, '.todo')
+const p = require('path')
+const dbPath = p.join(home, '.todo')
 
 const fs = require('fs');
 
@@ -14,7 +14,7 @@ const db = {
         let list
         try {
           list = JSON.parse(data.toString())
-        } catch(error2) {
+        } catch(listError) {
           list = []
         }
         resolve(list)

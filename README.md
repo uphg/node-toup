@@ -1,6 +1,6 @@
 ## Toup
 
-一个命令行的任务清单管理工具 
+命令行的任务清单管理工具 
 
 ## 安装
 
@@ -24,4 +24,3 @@ t clear
 
 - commander.js v7.2.0 
 - inquirer.js v8.0.0
-- Jest.js v26.6.3

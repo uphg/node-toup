@@ -2,11 +2,8 @@ const db = require('./db.js');
 const inquirer = require('inquirer');
 
 module.exports.add = async (title)=>{
-  // 读取任务
   const list = await db.read()
-  // 添加任务
   list.push({ title: title, done: false })
-  // 存储任务
   await db.write(list)
 }
 
@@ -16,7 +13,6 @@ module.exports.clear = async ()=>{
 
 module.exports.showAll = showTaskList
 
-// 显示任务列表
 async function showTaskList() {
   const list = await db.read()
   const index = await printTasks(list)
@@ -27,7 +23,6 @@ async function showTaskList() {
   }
 }
 
-// 打印任务列表
 function printTasks(list) {
   return new Promise((resolve, reject)=>{
     inquirer.prompt({
@@ -51,7 +46,7 @@ function printTasks(list) {
   })
 }
 
-// 操作指定任务
+// edit current task
 function askForAction(list, index) {
   const actions = { quit, markAsUndone, markAsDone, remove, updateTitle }
   inquirer.prompt({
@@ -70,7 +65,7 @@ function askForAction(list, index) {
   })
 }
 
-// 新建任务
+// create task
 function askForCreateTask(list) {
   inquirer.prompt({
     type: 'input',
@@ -86,23 +81,26 @@ function askForCreateTask(list) {
   })
 }
 
-// 操作任务*
+// quit edit
 function quit() {
-  showTaskList()
+  void showTaskList()
 }
 
+// mark task completed
 async function markAsDone(list, index) {
   list[index].done = true
   await db.write(list)
-  showTaskList()
+  await showTaskList()
 }
 
+// mark task incomplete
 async function markAsUndone(list, index) {
   list[index].done = false
   await db.write(list)
-  showTaskList()
+  await showTaskList()
 }
 
+// edit title
 async function updateTitle(list, index) {
   inquirer.prompt({
     type: 'input',
@@ -116,6 +114,7 @@ async function updateTitle(list, index) {
   })
 }
 
+// remove task
 async function remove(list, index) {
   list.splice(index, 1)
   await db.write(list)
